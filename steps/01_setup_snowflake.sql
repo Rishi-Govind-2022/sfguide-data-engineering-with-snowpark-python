@@ -1,4 +1,4 @@
-/*-----------------------------------------------------------------------------
+/*-----------------------------------------------------------------------------                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
 Hands-On Lab: Data Engineering with Snowpark
 Script:       01_setup_snowflake.sql
 Author:       Jeremiah Hansen
@@ -23,7 +23,7 @@ SET MY_USER = CURRENT_USER();
 CREATE OR REPLACE ROLE HOL_ROLE;
 GRANT ROLE HOL_ROLE TO ROLE SYSADMIN;
 GRANT ROLE HOL_ROLE TO USER IDENTIFIER($MY_USER);
-
+GRANT ROLE HOL_ROLE TO USER SVC_PYTHON_USER; --changed by RG
 GRANT EXECUTE TASK ON ACCOUNT TO ROLE HOL_ROLE;
 GRANT MONITOR EXECUTION ON ACCOUNT TO ROLE HOL_ROLE;
 GRANT IMPORTED PRIVILEGES ON DATABASE SNOWFLAKE TO ROLE HOL_ROLE;
